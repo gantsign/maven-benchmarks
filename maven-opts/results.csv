@@ -1,240 +1,240 @@
-8u202,baseline,55.54
-8u202,baseline,62.22
-8u202,baseline,63.12
-8u202,baseline,64.06
-8u202,baseline,60.29
-8u202,baseline,61.37
-8u202,baseline,61.29
-8u202,baseline,61.50
-8u202,baseline,61.60
-8u202,baseline,60.06
-8u202,throughput gc,60.28
-8u202,throughput gc,57.52
-8u202,throughput gc,60.64
-8u202,throughput gc,61.38
-8u202,throughput gc,55.71
-8u202,throughput gc,61.16
-8u202,throughput gc,60.36
-8u202,throughput gc,62.06
-8u202,throughput gc,56.75
-8u202,throughput gc,60.23
-8u202,CDS,61.66
-8u202,CDS,60.32
-8u202,CDS,58.65
+8u202,baseline,52.92
+8u202,baseline,57.15
+8u202,baseline,53.85
+8u202,baseline,57.00
+8u202,baseline,52.31
+8u202,baseline,57.86
+8u202,baseline,54.16
+8u202,baseline,58.11
+8u202,baseline,53.25
+8u202,baseline,58.51
+8u202,throughput gc,56.64
+8u202,throughput gc,54.93
+8u202,throughput gc,55.80
+8u202,throughput gc,53.22
+8u202,throughput gc,58.19
+8u202,throughput gc,57.69
+8u202,throughput gc,53.03
+8u202,throughput gc,57.67
+8u202,throughput gc,53.44
+8u202,throughput gc,56.90
+8u202,CDS,55.75
+8u202,CDS,56.42
+8u202,CDS,58.72
+8u202,CDS,52.80
 8u202,CDS,56.97
-8u202,CDS,59.73
-8u202,CDS,61.19
-8u202,CDS,59.99
-8u202,CDS,59.96
-8u202,CDS,58.85
-8u202,CDS,60.61
+8u202,CDS,53.96
+8u202,CDS,58.05
+8u202,CDS,53.57
+8u202,CDS,57.34
+8u202,CDS,53.17
+8u202,C1 only,49.27
+8u202,C1 only,49.24
+8u202,C1 only,49.81
+8u202,C1 only,49.03
+8u202,C1 only,47.77
 8u202,C1 only,49.01
-8u202,C1 only,53.87
-8u202,C1 only,50.44
-8u202,C1 only,52.21
-8u202,C1 only,47.58
-8u202,C1 only,52.64
-8u202,C1 only,52.10
-8u202,C1 only,50.80
-8u202,C1 only,50.26
-8u202,C1 only,50.77
-8u202,no verify,61.10
-8u202,no verify,60.49
-8u202,no verify,61.78
-8u202,no verify,59.28
-8u202,no verify,61.05
-8u202,no verify,60.73
-8u202,no verify,54.90
-8u202,no verify,58.87
-8u202,no verify,53.76
-8u202,no verify,58.92
-8u202,tuned,52.60
-8u202,tuned,51.08
-8u202,tuned,49.70
-8u202,tuned,51.48
-8u202,tuned,52.19
-8u202,tuned,49.05
-8u202,tuned,53.25
-8u202,tuned,51.79
-8u202,tuned,51.89
-8u202,tuned,46.87
-8u202_openj9,baseline,102.06
-8u202_openj9,baseline,100.85
-8u202_openj9,baseline,101.34
-8u202_openj9,baseline,100.26
-8u202_openj9,baseline,100.95
-8u202_openj9,baseline,105.64
-8u202_openj9,baseline,101.15
-8u202_openj9,baseline,103.62
-8u202_openj9,baseline,115.33
-8u202_openj9,baseline,102.43
-8u202_openj9,throughput gc,107.62
-8u202_openj9,throughput gc,99.43
-8u202_openj9,throughput gc,98.73
-8u202_openj9,throughput gc,110.23
-8u202_openj9,throughput gc,105.64
-8u202_openj9,throughput gc,101.86
-8u202_openj9,throughput gc,126.20
-8u202_openj9,throughput gc,106.90
-8u202_openj9,throughput gc,99.70
-8u202_openj9,throughput gc,122.70
-8u202_openj9,class cache,65.41
-8u202_openj9,class cache,85.17
-8u202_openj9,class cache,74.47
-8u202_openj9,class cache,67.43
-8u202_openj9,class cache,67.96
-8u202_openj9,class cache,106.53
-8u202_openj9,class cache,68.77
-8u202_openj9,class cache,67.06
-8u202_openj9,class cache,62.66
-8u202_openj9,class cache,90.43
-8u202_openj9,quick start,78.58
-8u202_openj9,quick start,90.82
-8u202_openj9,quick start,88.15
-8u202_openj9,quick start,79.92
-8u202_openj9,quick start,78.85
-8u202_openj9,quick start,103.86
-8u202_openj9,quick start,83.10
-8u202_openj9,quick start,83.68
-8u202_openj9,quick start,102.27
-8u202_openj9,quick start,81.97
-8u202_openj9,no verify,131.25
-8u202_openj9,no verify,104.53
-8u202_openj9,no verify,101.31
-8u202_openj9,no verify,137.23
-8u202_openj9,no verify,103.40
-8u202_openj9,no verify,125.49
-8u202_openj9,no verify,116.69
-8u202_openj9,no verify,101.88
-8u202_openj9,no verify,132.83
-8u202_openj9,no verify,104.04
-8u202_openj9,tuned,49.65
-8u202_openj9,tuned,45.75
-8u202_openj9,tuned,48.56
-8u202_openj9,tuned,52.65
-8u202_openj9,tuned,79.74
-8u202_openj9,tuned,46.27
-8u202_openj9,tuned,50.49
-8u202_openj9,tuned,46.62
-8u202_openj9,tuned,47.56
-8u202_openj9,tuned,74.71
-11.0.2,baseline,103.75
-11.0.2,baseline,82.80
-11.0.2,baseline,84.16
-11.0.2,baseline,108.82
-11.0.2,baseline,74.49
-11.0.2,baseline,78.40
-11.0.2,baseline,105.73
-11.0.2,baseline,82.13
-11.0.2,baseline,79.23
-11.0.2,baseline,94.35
-11.0.2,throughput gc,76.14
-11.0.2,throughput gc,71.57
-11.0.2,throughput gc,103.96
-11.0.2,throughput gc,74.12
-11.0.2,throughput gc,74.70
-11.0.2,throughput gc,68.34
-11.0.2,throughput gc,110.06
-11.0.2,throughput gc,77.26
-11.0.2,throughput gc,74.08
-11.0.2,throughput gc,102.97
-11.0.2,CDS,75.61
-11.0.2,CDS,86.74
-11.0.2,CDS,110.96
-11.0.2,CDS,80.82
-11.0.2,CDS,78.64
-11.0.2,CDS,112.08
-11.0.2,CDS,81.11
-11.0.2,CDS,78.33
-11.0.2,CDS,106.50
-11.0.2,CDS,80.53
-11.0.2,C1 only,63.79
-11.0.2,C1 only,98.77
-11.0.2,C1 only,70.74
-11.0.2,C1 only,69.93
-11.0.2,C1 only,71.54
-11.0.2,C1 only,98.58
-11.0.2,C1 only,72.44
-11.0.2,C1 only,66.36
-11.0.2,C1 only,69.08
-11.0.2,C1 only,98.58
-11.0.2,no verify,77.62
-11.0.2,no verify,86.18
-11.0.2,no verify,96.69
-11.0.2,no verify,81.49
-11.0.2,no verify,80.47
-11.0.2,no verify,108.62
-11.0.2,no verify,78.03
-11.0.2,no verify,73.63
-11.0.2,no verify,99.45
-11.0.2,no verify,84.53
-11.0.2,tuned,66.06
-11.0.2,tuned,92.54
-11.0.2,tuned,68.16
-11.0.2,tuned,65.40
-11.0.2,tuned,65.03
-11.0.2,tuned,94.80
-11.0.2,tuned,67.49
-11.0.2,tuned,66.71
-11.0.2,tuned,65.68
-11.0.2,tuned,82.34
-11.0.2_openj9,baseline,125.09
-11.0.2_openj9,baseline,160.23
-11.0.2_openj9,baseline,131.31
-11.0.2_openj9,baseline,154.04
-11.0.2_openj9,baseline,128.56
-11.0.2_openj9,baseline,155.43
-11.0.2_openj9,baseline,133.50
-11.0.2_openj9,baseline,146.12
-11.0.2_openj9,baseline,147.14
-11.0.2_openj9,baseline,145.86
-11.0.2_openj9,throughput gc,141.65
-11.0.2_openj9,throughput gc,155.77
-11.0.2_openj9,throughput gc,137.89
-11.0.2_openj9,throughput gc,160.91
-11.0.2_openj9,throughput gc,142.23
-11.0.2_openj9,throughput gc,159.64
-11.0.2_openj9,throughput gc,140.91
-11.0.2_openj9,throughput gc,159.12
-11.0.2_openj9,throughput gc,138.93
-11.0.2_openj9,throughput gc,156.74
-11.0.2_openj9,class cache,93.30
-11.0.2_openj9,class cache,87.59
-11.0.2_openj9,class cache,84.21
-11.0.2_openj9,class cache,117.05
-11.0.2_openj9,class cache,85.05
-11.0.2_openj9,class cache,82.84
-11.0.2_openj9,class cache,121.53
-11.0.2_openj9,class cache,80.09
-11.0.2_openj9,class cache,74.30
-11.0.2_openj9,class cache,112.18
-11.0.2_openj9,quick start,96.85
-11.0.2_openj9,quick start,129.56
-11.0.2_openj9,quick start,99.93
-11.0.2_openj9,quick start,117.05
-11.0.2_openj9,quick start,122.87
-11.0.2_openj9,quick start,102.46
-11.0.2_openj9,quick start,129.16
-11.0.2_openj9,quick start,102.71
-11.0.2_openj9,quick start,99.56
-11.0.2_openj9,quick start,131.45
-11.0.2_openj9,no verify,151.80
-11.0.2_openj9,no verify,128.65
-11.0.2_openj9,no verify,154.51
-11.0.2_openj9,no verify,129.41
-11.0.2_openj9,no verify,156.18
-11.0.2_openj9,no verify,128.46
-11.0.2_openj9,no verify,155.18
-11.0.2_openj9,no verify,131.71
-11.0.2_openj9,no verify,150.90
-11.0.2_openj9,no verify,141.80
-11.0.2_openj9,tuned,60.89
-11.0.2_openj9,tuned,59.88
-11.0.2_openj9,tuned,76.65
-11.0.2_openj9,tuned,82.43
-11.0.2_openj9,tuned,60.33
-11.0.2_openj9,tuned,60.77
-11.0.2_openj9,tuned,55.55
-11.0.2_openj9,tuned,96.81
-11.0.2_openj9,tuned,64.10
-11.0.2_openj9,tuned,60.60
+8u202,C1 only,46.99
+8u202,C1 only,50.52
+8u202,C1 only,47.30
+8u202,C1 only,50.14
+8u202,no verify,55.89
+8u202,no verify,52.26
+8u202,no verify,58.22
+8u202,no verify,51.97
+8u202,no verify,56.33
+8u202,no verify,51.94
+8u202,no verify,55.87
+8u202,no verify,53.71
+8u202,no verify,56.38
+8u202,no verify,51.87
+8u202,tuned,48.54
+8u202,tuned,46.85
+8u202,tuned,47.76
+8u202,tuned,48.50
+8u202,tuned,46.25
+8u202,tuned,49.49
+8u202,tuned,45.33
+8u202,tuned,48.59
+8u202,tuned,45.64
+8u202,tuned,46.89
+8u202_openj9,baseline,95.46
+8u202_openj9,baseline,96.00
+8u202_openj9,baseline,92.89
+8u202_openj9,baseline,94.96
+8u202_openj9,baseline,94.99
+8u202_openj9,baseline,97.77
+8u202_openj9,baseline,94.08
+8u202_openj9,baseline,97.35
+8u202_openj9,baseline,93.99
+8u202_openj9,baseline,96.15
+8u202_openj9,throughput gc,97.85
+8u202_openj9,throughput gc,93.63
+8u202_openj9,throughput gc,96.14
+8u202_openj9,throughput gc,98.89
+8u202_openj9,throughput gc,93.24
+8u202_openj9,throughput gc,95.80
+8u202_openj9,throughput gc,97.83
+8u202_openj9,throughput gc,94.50
+8u202_openj9,throughput gc,98.37
+8u202_openj9,throughput gc,96.07
+8u202_openj9,class cache,63.13
+8u202_openj9,class cache,59.26
+8u202_openj9,class cache,60.00
+8u202_openj9,class cache,57.55
+8u202_openj9,class cache,57.56
+8u202_openj9,class cache,63.97
+8u202_openj9,class cache,57.92
+8u202_openj9,class cache,61.57
+8u202_openj9,class cache,62.52
+8u202_openj9,class cache,58.14
+8u202_openj9,quick start,73.81
+8u202_openj9,quick start,75.04
+8u202_openj9,quick start,70.78
+8u202_openj9,quick start,68.15
+8u202_openj9,quick start,74.46
+8u202_openj9,quick start,68.34
+8u202_openj9,quick start,74.03
+8u202_openj9,quick start,73.97
+8u202_openj9,quick start,68.57
+8u202_openj9,quick start,72.14
+8u202_openj9,no verify,93.99
+8u202_openj9,no verify,92.95
+8u202_openj9,no verify,96.13
+8u202_openj9,no verify,93.70
+8u202_openj9,no verify,96.87
+8u202_openj9,no verify,95.19
+8u202_openj9,no verify,94.84
+8u202_openj9,no verify,94.70
+8u202_openj9,no verify,93.06
+8u202_openj9,no verify,95.94
+8u202_openj9,tuned,45.18
+8u202_openj9,tuned,45.34
+8u202_openj9,tuned,42.41
+8u202_openj9,tuned,45.02
+8u202_openj9,tuned,44.68
+8u202_openj9,tuned,44.20
+8u202_openj9,tuned,43.90
+8u202_openj9,tuned,45.39
+8u202_openj9,tuned,41.93
+8u202_openj9,tuned,44.87
+11.0.2,baseline,69.80
+11.0.2,baseline,73.39
+11.0.2,baseline,74.32
+11.0.2,baseline,72.69
+11.0.2,baseline,74.11
+11.0.2,baseline,73.47
+11.0.2,baseline,67.94
+11.0.2,baseline,71.99
+11.0.2,baseline,68.69
+11.0.2,baseline,72.39
+11.0.2,throughput gc,67.24
+11.0.2,throughput gc,67.31
+11.0.2,throughput gc,68.00
+11.0.2,throughput gc,64.76
+11.0.2,throughput gc,67.32
+11.0.2,throughput gc,62.12
+11.0.2,throughput gc,68.57
+11.0.2,throughput gc,61.56
+11.0.2,throughput gc,68.84
+11.0.2,throughput gc,64.19
+11.0.2,CDS,67.08
+11.0.2,CDS,75.26
+11.0.2,CDS,69.61
+11.0.2,CDS,71.85
+11.0.2,CDS,65.76
+11.0.2,CDS,73.23
+11.0.2,CDS,67.36
+11.0.2,CDS,73.18
+11.0.2,CDS,68.08
+11.0.2,CDS,71.12
+11.0.2,C1 only,62.45
+11.0.2,C1 only,63.34
+11.0.2,C1 only,59.30
+11.0.2,C1 only,60.59
+11.0.2,C1 only,60.03
+11.0.2,C1 only,65.62
+11.0.2,C1 only,65.33
+11.0.2,C1 only,58.95
+11.0.2,C1 only,64.60
+11.0.2,C1 only,62.65
+11.0.2,no verify,71.85
+11.0.2,no verify,66.32
+11.0.2,no verify,70.38
+11.0.2,no verify,68.49
+11.0.2,no verify,68.69
+11.0.2,no verify,69.22
+11.0.2,no verify,68.27
+11.0.2,no verify,68.35
+11.0.2,no verify,72.50
+11.0.2,no verify,67.87
+11.0.2,tuned,59.65
+11.0.2,tuned,59.81
+11.0.2,tuned,58.64
+11.0.2,tuned,56.96
+11.0.2,tuned,57.89
+11.0.2,tuned,55.63
+11.0.2,tuned,60.47
+11.0.2,tuned,58.10
+11.0.2,tuned,60.68
+11.0.2,tuned,60.20
+11.0.2_openj9,baseline,117.90
+11.0.2_openj9,baseline,117.42
+11.0.2_openj9,baseline,120.93
+11.0.2_openj9,baseline,117.55
+11.0.2_openj9,baseline,119.32
+11.0.2_openj9,baseline,117.66
+11.0.2_openj9,baseline,120.22
+11.0.2_openj9,baseline,119.39
+11.0.2_openj9,baseline,119.92
+11.0.2_openj9,baseline,119.38
+11.0.2_openj9,throughput gc,117.82
+11.0.2_openj9,throughput gc,119.68
+11.0.2_openj9,throughput gc,122.54
+11.0.2_openj9,throughput gc,122.46
+11.0.2_openj9,throughput gc,120.85
+11.0.2_openj9,throughput gc,119.65
+11.0.2_openj9,throughput gc,121.53
+11.0.2_openj9,throughput gc,118.29
+11.0.2_openj9,throughput gc,124.12
+11.0.2_openj9,throughput gc,121.92
+11.0.2_openj9,class cache,68.33
+11.0.2_openj9,class cache,75.01
+11.0.2_openj9,class cache,72.14
+11.0.2_openj9,class cache,77.80
+11.0.2_openj9,class cache,69.61
+11.0.2_openj9,class cache,75.31
+11.0.2_openj9,class cache,69.53
+11.0.2_openj9,class cache,73.09
+11.0.2_openj9,class cache,68.83
+11.0.2_openj9,class cache,74.18
+11.0.2_openj9,quick start,90.85
+11.0.2_openj9,quick start,91.20
+11.0.2_openj9,quick start,92.00
+11.0.2_openj9,quick start,85.28
+11.0.2_openj9,quick start,90.47
+11.0.2_openj9,quick start,93.05
+11.0.2_openj9,quick start,91.84
+11.0.2_openj9,quick start,87.28
+11.0.2_openj9,quick start,90.94
+11.0.2_openj9,quick start,87.37
+11.0.2_openj9,no verify,125.00
+11.0.2_openj9,no verify,120.53
+11.0.2_openj9,no verify,120.51
+11.0.2_openj9,no verify,121.07
+11.0.2_openj9,no verify,120.22
+11.0.2_openj9,no verify,118.15
+11.0.2_openj9,no verify,118.39
+11.0.2_openj9,no verify,121.45
+11.0.2_openj9,no verify,120.38
+11.0.2_openj9,no verify,121.41
+11.0.2_openj9,tuned,56.20
+11.0.2_openj9,tuned,55.91
+11.0.2_openj9,tuned,52.14
+11.0.2_openj9,tuned,56.64
+11.0.2_openj9,tuned,52.57
+11.0.2_openj9,tuned,55.64
+11.0.2_openj9,tuned,55.64
+11.0.2_openj9,tuned,55.93
+11.0.2_openj9,tuned,54.65
+11.0.2_openj9,tuned,56.32

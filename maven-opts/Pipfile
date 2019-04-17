@@ -9,7 +9,6 @@ name = "pypi"
 jupyter = "*"
 pandas = "*"
 plotly = "*"
-hide-code = "*"
 
 [requires]
 python_version = "2.7"

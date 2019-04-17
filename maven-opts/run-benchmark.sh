@@ -26,7 +26,7 @@ benchmark() {
     (cd tmp/commons-collections &>/dev/null && \
         mvn --quiet clean install)
 
-    for i in {1..1}
+    for i in {1..10}
     do
         (cd tmp/commons-collections &>/dev/null && git clean --force)
         (cd tmp/commons-collections &>/dev/null && /usr/bin/time \
@@ -39,33 +39,33 @@ benchmark() {
 printf '' > "$results_file"
 
 jdk_name='8u202'
-# benchmark 'baseline' '-Xshare:off'
-# benchmark 'throughput gc' '-Xshare:off -XX:+UseParallelGC'
-# benchmark 'CDS' '-Xshare:on'
-# benchmark 'C1 only' '-Xshare:off -XX:TieredStopAtLevel=1'
-# benchmark 'no verify' '-Xshare:off -Xverify:none'
-# benchmark 'tuned' '-Xshare:on -XX:TieredStopAtLevel=1 -XX:+UseParallelGC -Xverify:none'
+benchmark 'baseline' '-Xshare:off'
+benchmark 'throughput gc' '-Xshare:off -XX:+UseParallelGC'
+benchmark 'CDS' '-Xshare:on'
+benchmark 'C1 only' '-Xshare:off -XX:TieredStopAtLevel=1'
+benchmark 'no verify' '-Xshare:off -Xverify:none'
+benchmark 'tuned' '-Xshare:on -XX:TieredStopAtLevel=1 -XX:+UseParallelGC -Xverify:none'
 
 jdk_name='8u202_openj9'
-# benchmark 'baseline' ''
-# benchmark 'throughput gc' '-Xgcpolicy:optthruput'
-# benchmark 'class cache' '-Xshareclasses:name=mvn -DargLine=-Xshareclasses:none'
-# benchmark 'quick start' '-Xquickstart'
-# benchmark 'no verify' '-Xverify:none'
-# benchmark 'tuned' '-Xquickstart -Xshareclasses:name=mvn -DargLine=-Xquickstart'
+benchmark 'baseline' ''
+benchmark 'throughput gc' '-Xgcpolicy:optthruput'
+benchmark 'class cache' '-Xshareclasses:name=mvn -DargLine=-Xshareclasses:none'
+benchmark 'quick start' '-Xquickstart'
+benchmark 'no verify' '-Xverify:none'
+benchmark 'tuned' '-Xquickstart -Xshareclasses:name=mvn -DargLine=-Xquickstart -Xverify:none'
 
 jdk_name='11.0.2'
-# benchmark 'baseline' '-Xshare:off'
-# benchmark 'throughput gc' '-Xshare:off -XX:+UseParallelGC'
-# benchmark 'CDS' '-Xshare:on'
-# benchmark 'C1 only' '-Xshare:off -XX:TieredStopAtLevel=1'
-# benchmark 'no verify' '-Xshare:off -Xverify:none'
+benchmark 'baseline' '-Xshare:off'
+benchmark 'throughput gc' '-Xshare:off -XX:+UseParallelGC'
+benchmark 'CDS' '-Xshare:on'
+benchmark 'C1 only' '-Xshare:off -XX:TieredStopAtLevel=1'
+benchmark 'no verify' '-Xshare:off -Xverify:none'
 benchmark 'tuned' '-Xshare:on -XX:TieredStopAtLevel=1 -XX:+UseParallelGC -Xverify:none'
 
 jdk_name='11.0.2_openj9'
-# benchmark 'baseline' ''
-# benchmark 'throughput gc' '-Xgcpolicy:optthruput'
-# benchmark 'class cache' '-Xshareclasses:name=mvn -DargLine=-Xshareclasses:none'
-# benchmark 'quick start' '-Xquickstart'
-# benchmark 'no verify' '-Xverify:none'
+benchmark 'baseline' ''
+benchmark 'throughput gc' '-Xgcpolicy:optthruput'
+benchmark 'class cache' '-Xshareclasses:name=mvn -DargLine=-Xshareclasses:none'
+benchmark 'quick start' '-Xquickstart'
+benchmark 'no verify' '-Xverify:none'
 benchmark 'tuned' '-Xquickstart -Xshareclasses:name=mvn -DargLine=-Xquickstart'
