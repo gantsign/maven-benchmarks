@@ -1,0 +1,7 @@
+{
+  "bundles": [
+    {"name":"com.sun.tools.javac.resources.compiler"},
+    {"name":"com.sun.tools.javac.resources.javac"}    
+  ],  
+  "resources":[]
+}
