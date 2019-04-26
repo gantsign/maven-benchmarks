@@ -63,7 +63,7 @@ Look for a URL like `http://localhost:8888/?token=<token>` in the console output
 and open thee URL in your web browser.
 
 Navigate to `JavacNative.ipynb`, `MavenJavacNative.ipynb`,
-`MavenNoTessJavacNative.ipynb` to to view the results.
+`MavenNoTestsJavacNative.ipynb` to to view the results.
 
 ## Test environment
 

@@ -5,23 +5,23 @@ set -e
 mkdir -p tmp/bin
 
 dependencies=(
-"https://github.com/oracle/graal/releases/download/vm-1.0.0-rc15/\
-graalvm-ce-1.0.0-rc15-linux-amd64.tar.gz"
+"https://github.com/oracle/graal/releases/download/vm-1.0.0-rc16/\
+graalvm-ce-1.0.0-rc16-linux-amd64.tar.gz"
 
 "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/\
-jdk8u202-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u202b08.tar.gz"
+jdk8u212-b03/OpenJDK8U-jdk_x64_linux_hotspot_8u212b03.tar.gz"
 
 "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/\
-jdk8u202-b08_openj9-0.12.1/OpenJDK8U-jdk_x64_linux_openj9_8u202b08_openj9-0.12.1.tar.gz"
-
-"https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/jdk-11.0.2%2B9/\
-OpenJDK11U-jdk_x64_linux_hotspot_11.0.2_9.tar.gz"
+jdk8u212-b03_openj9-0.14.0/OpenJDK8U-jdk_x64_linux_openj9_8u212b03_openj9-0.14.0.tar.gz"
 
 "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/\
-jdk-11.0.2%2B9_openj9-0.12.1/OpenJDK11U-jdk_x64_linux_openj9_11.0.2_9_openj9-0.12.1_openj9-0.12.1.tar.gz"
+jdk-11.0.3%2B7/OpenJDK11U-jdk_x64_linux_hotspot_11.0.3_7.tar.gz"
 
-"http://mirror.ox.ac.uk/sites/rsync.apache.org/maven/maven-3/3.6.0/binaries/\
-apache-maven-3.6.0-bin.tar.gz"
+"https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/\
+jdk-11.0.3%2B7_openj9-0.14.0/OpenJDK11U-jdk_x64_linux_openj9_11.0.3_7_openj9-0.14.0.tar.gz"
+
+"http://mirror.ox.ac.uk/sites/rsync.apache.org/maven/maven-3/3.6.1/binaries/\
+apache-maven-3.6.1-bin.tar.gz"
 )
 
 prepare() {
@@ -31,28 +31,28 @@ prepare() {
   done
 
   (set -x; tar --extract \
-    --transform 's|graalvm-ce-1.0.0-rc15|jdk/8u202_graalvm|' --file \
-    'graalvm-ce-1.0.0-rc15-linux-amd64.tar.gz')
+    --transform 's|graalvm-ce-1.0.0-rc16|jdk/8u202_graalvm-ce|' --file \
+    'graalvm-ce-1.0.0-rc16-linux-amd64.tar.gz')
 
   (set -x; tar --extract \
-    --transform 's|jdk8u202-b08|jdk/8u202|' --file \
-    'OpenJDK8U-jdk_x64_linux_hotspot_8u202b08.tar.gz')
+    --transform 's|jdk8u212-b03|jdk/8u212|' --file \
+    'OpenJDK8U-jdk_x64_linux_hotspot_8u212b03.tar.gz')
 
   (set -x; tar --extract \
-    --transform 's|jdk8u202-b08|jdk/8u202_openj9|' --file \
-    'OpenJDK8U-jdk_x64_linux_openj9_8u202b08_openj9-0.12.1.tar.gz')
+    --transform 's|jdk8u212-b03|jdk/8u212_openj9|' --file \
+    'OpenJDK8U-jdk_x64_linux_openj9_8u212b03_openj9-0.14.0.tar.gz')
 
   (set -x; tar --extract \
-    --transform 's|jdk-11.0.2+9|jdk/11.0.2|' --file \
-    'OpenJDK11U-jdk_x64_linux_hotspot_11.0.2_9.tar.gz')
+    --transform 's|jdk-11.0.3+7|jdk/11.0.3|' --file \
+    'OpenJDK11U-jdk_x64_linux_hotspot_11.0.3_7.tar.gz')
 
   (set -x; tar --extract \
-    --transform 's|jdk-11.0.2+9_openj9-0.12.1|jdk/11.0.2_openj9|' --file \
-    'OpenJDK11U-jdk_x64_linux_openj9_11.0.2_9_openj9-0.12.1_openj9-0.12.1.tar.gz')
+    --transform 's|jdk-11.0.3+7|jdk/11.0.3_openj9|' --file \
+    'OpenJDK11U-jdk_x64_linux_openj9_11.0.3_7_openj9-0.14.0.tar.gz')
 
   (set -x; tar --extract \
-    --transform 's|apache-maven-3.6.0|maven/3.6.0|' --file \
-    'apache-maven-3.6.0-bin.tar.gz')
+    --transform 's|apache-maven-3.6.1|maven/3.6.1|' --file \
+    'apache-maven-3.6.1-bin.tar.gz')
 
   (set -x; rm -rf commons-collections)
 
@@ -63,13 +63,18 @@ prepare() {
   (cd commons-collections && set -x; \
     git checkout 68948279bc8d54ed5f54ea84243a9182d868e016)
 
-  GRAAL_HOME="$PWD/jdk/8u202_graalvm"
+  # These tests cause intermittent failures on OpenJ9: java.lang.OutOfMemoryError: Java heap space
+  rm commons-collections/src/test/java/org/apache/commons/collections4/map/ReferenceIdentityMapTest.java
+  rm commons-collections/src/test/java/org/apache/commons/collections4/map/ReferenceMapTest.java
+
+  export GRAAL_HOME="$PWD/jdk/8u202_graalvm-ce"
 
   (set -x; "$GRAAL_HOME/bin/javac" \
     -classpath "$GRAAL_HOME/lib/tools.jar" ../Javac.java)
 
   (set -x; "$GRAAL_HOME/bin/native-image" --no-server \
     "-H:ConfigurationFileDirectories=$PWD/../config" \
+    --no-fallback \
     -H:-MultiThreaded \
     -H:+NativeArchitecture \
     -H:Name=javac-native "-H:Path=$PWD/bin" \

@@ -1,8 +1,6 @@
-# Maven Benchmarks
+# Maven MAVEN_OPTS Benchmarks
 
-## MAVEN_OPTS
-
-### Prerequisites
+## Prerequisites
 
 * Ubuntu Linux
 
@@ -24,36 +22,40 @@
 
 **Once you've installed the dependencies you need to restart your terminal window.**
 
-### Install project Python dependencies
+## Install project Python dependencies
 
 Run the following from the project root:
 
 ```bash
+cd maven-opts
 pipenv install
 ```
 
-### Install other project dependencies
+## Install other project dependencies
 
 You only need to run this once. Run the following from the project root:
 
 ```bash
+cd maven-opts
 ./prepare.sh
 ```
 
-### Run benchmark
+## Run benchmark
 
 This will run the benchmark and write the results to `results.csv`. Run the
 following from the project root:
 
 ```
+cd maven-opts
 ./run-benchmark.sh
 ```
 
-### View results
+## View results
 
 Run the following from the project root:
 
 ```bash
+cd maven-opts
 pipenv run jupiter notebook
 ```
 
@@ -62,7 +64,7 @@ and open thee URL in your web browser.
 
 Navigate to `JdkBenchmarks.ipynb` to to view the results.
 
-### Test environment
+## Test environment
 
 The Machine I used for testing was a
 [Lenovo YOGA 900 13ISK](https://www.notebookcheck.net/Lenovo-Yoga-900-13ISK-Convertible-Review.154217.0.html)

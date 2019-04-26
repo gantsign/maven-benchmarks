@@ -2,7 +2,7 @@
 
 set -e
 
-base_path="$(pwd)/tmp/maven/3.6.0/bin:$PATH"
+base_path="$(pwd)/tmp/maven/3.6.1/bin:$PATH"
 
 results_file="$(pwd)/results.csv"
 
@@ -38,7 +38,7 @@ benchmark() {
 
 printf '' > "$results_file"
 
-jdk_name='8u202'
+jdk_name='8u212'
 benchmark 'baseline' '-Xshare:off'
 benchmark 'throughput gc' '-Xshare:off -XX:+UseParallelGC'
 benchmark 'CDS' '-Xshare:on'
@@ -46,7 +46,7 @@ benchmark 'C1 only' '-Xshare:off -XX:TieredStopAtLevel=1'
 benchmark 'no verify' '-Xshare:off -Xverify:none'
 benchmark 'tuned' '-Xshare:on -XX:TieredStopAtLevel=1 -XX:+UseParallelGC -Xverify:none'
 
-jdk_name='8u202_openj9'
+jdk_name='8u212_openj9'
 benchmark 'baseline' ''
 benchmark 'throughput gc' '-Xgcpolicy:optthruput'
 benchmark 'class cache' '-Xshareclasses:name=mvn -DargLine=-Xshareclasses:none'
@@ -54,7 +54,7 @@ benchmark 'quick start' '-Xquickstart'
 benchmark 'no verify' '-Xverify:none'
 benchmark 'tuned' '-Xquickstart -Xshareclasses:name=mvn -DargLine=-Xquickstart -Xverify:none'
 
-jdk_name='11.0.2'
+jdk_name='11.0.3'
 benchmark 'baseline' '-Xshare:off'
 benchmark 'throughput gc' '-Xshare:off -XX:+UseParallelGC'
 benchmark 'CDS' '-Xshare:on'
@@ -62,10 +62,10 @@ benchmark 'C1 only' '-Xshare:off -XX:TieredStopAtLevel=1'
 benchmark 'no verify' '-Xshare:off -Xverify:none'
 benchmark 'tuned' '-Xshare:on -XX:TieredStopAtLevel=1 -XX:+UseParallelGC -Xverify:none'
 
-jdk_name='11.0.2_openj9'
+jdk_name='11.0.3_openj9'
 benchmark 'baseline' ''
 benchmark 'throughput gc' '-Xgcpolicy:optthruput'
 benchmark 'class cache' '-Xshareclasses:name=mvn -DargLine=-Xshareclasses:none'
 benchmark 'quick start' '-Xquickstart'
 benchmark 'no verify' '-Xverify:none'
-benchmark 'tuned' '-Xquickstart -Xshareclasses:name=mvn -DargLine=-Xquickstart'
+benchmark 'tuned' '-Xquickstart -Xshareclasses:name=mvn -DargLine=-Xquickstart -Xverify:none'
