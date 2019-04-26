@@ -178,63 +178,63 @@
 11.0.3,tuned,54.19
 11.0.3,tuned,55.13
 11.0.3,tuned,53.65
-11.0.3_openj9,baseline,109.75
-11.0.3_openj9,baseline,111.16
-11.0.3_openj9,baseline,106.23
-11.0.3_openj9,baseline,108.98
-11.0.3_openj9,baseline,110.67
-11.0.3_openj9,baseline,107.88
-11.0.3_openj9,baseline,109.59
-11.0.3_openj9,baseline,110.33
-11.0.3_openj9,baseline,107.00
-11.0.3_openj9,baseline,112.04
+11.0.3_openj9,baseline,113.18
+11.0.3_openj9,baseline,116.50
+11.0.3_openj9,baseline,111.86
+11.0.3_openj9,baseline,109.90
+11.0.3_openj9,baseline,113.76
+11.0.3_openj9,baseline,108.78
+11.0.3_openj9,baseline,113.19
+11.0.3_openj9,baseline,110.52
+11.0.3_openj9,baseline,110.05
+11.0.3_openj9,baseline,111.49
 11.0.3_openj9,throughput gc,112.36
-11.0.3_openj9,throughput gc,108.61
-11.0.3_openj9,throughput gc,106.17
-11.0.3_openj9,throughput gc,110.43
-11.0.3_openj9,throughput gc,108.12
-11.0.3_openj9,throughput gc,108.74
-11.0.3_openj9,throughput gc,112.29
-11.0.3_openj9,throughput gc,108.09
-11.0.3_openj9,throughput gc,108.81
-11.0.3_openj9,throughput gc,107.87
-11.0.3_openj9,class cache,71.87
-11.0.3_openj9,class cache,70.21
-11.0.3_openj9,class cache,71.52
-11.0.3_openj9,class cache,69.49
-11.0.3_openj9,class cache,69.35
-11.0.3_openj9,class cache,67.36
-11.0.3_openj9,class cache,68.61
-11.0.3_openj9,class cache,67.21
-11.0.3_openj9,class cache,69.39
-11.0.3_openj9,class cache,72.11
-11.0.3_openj9,quick start,84.47
-11.0.3_openj9,quick start,81.85
-11.0.3_openj9,quick start,85.93
-11.0.3_openj9,quick start,85.86
-11.0.3_openj9,quick start,84.08
-11.0.3_openj9,quick start,85.52
-11.0.3_openj9,quick start,82.81
+11.0.3_openj9,throughput gc,111.18
+11.0.3_openj9,throughput gc,112.92
+11.0.3_openj9,throughput gc,113.29
+11.0.3_openj9,throughput gc,114.60
+11.0.3_openj9,throughput gc,117.57
+11.0.3_openj9,throughput gc,111.67
+11.0.3_openj9,throughput gc,115.29
+11.0.3_openj9,throughput gc,116.48
+11.0.3_openj9,throughput gc,111.66
+11.0.3_openj9,class cache,73.15
+11.0.3_openj9,class cache,70.18
+11.0.3_openj9,class cache,70.04
+11.0.3_openj9,class cache,70.66
+11.0.3_openj9,class cache,71.21
+11.0.3_openj9,class cache,70.82
+11.0.3_openj9,class cache,69.48
+11.0.3_openj9,class cache,72.94
+11.0.3_openj9,class cache,71.56
+11.0.3_openj9,class cache,69.58
 11.0.3_openj9,quick start,87.21
-11.0.3_openj9,quick start,85.88
-11.0.3_openj9,quick start,86.17
-11.0.3_openj9,no verify,108.17
-11.0.3_openj9,no verify,110.06
-11.0.3_openj9,no verify,111.05
-11.0.3_openj9,no verify,108.10
-11.0.3_openj9,no verify,109.24
-11.0.3_openj9,no verify,106.27
-11.0.3_openj9,no verify,111.22
-11.0.3_openj9,no verify,106.37
-11.0.3_openj9,no verify,108.29
-11.0.3_openj9,no verify,107.98
-11.0.3_openj9,tuned,51.61
-11.0.3_openj9,tuned,50.70
-11.0.3_openj9,tuned,51.13
-11.0.3_openj9,tuned,51.26
-11.0.3_openj9,tuned,51.08
-11.0.3_openj9,tuned,50.49
-11.0.3_openj9,tuned,50.86
-11.0.3_openj9,tuned,51.15
-11.0.3_openj9,tuned,50.14
-11.0.3_openj9,tuned,51.00
+11.0.3_openj9,quick start,89.35
+11.0.3_openj9,quick start,90.86
+11.0.3_openj9,quick start,88.64
+11.0.3_openj9,quick start,89.24
+11.0.3_openj9,quick start,87.76
+11.0.3_openj9,quick start,86.57
+11.0.3_openj9,quick start,89.07
+11.0.3_openj9,quick start,86.05
+11.0.3_openj9,quick start,84.20
+11.0.3_openj9,no verify,108.83
+11.0.3_openj9,no verify,112.24
+11.0.3_openj9,no verify,109.60
+11.0.3_openj9,no verify,109.87
+11.0.3_openj9,no verify,108.68
+11.0.3_openj9,no verify,112.65
+11.0.3_openj9,no verify,112.10
+11.0.3_openj9,no verify,111.17
+11.0.3_openj9,no verify,112.04
+11.0.3_openj9,no verify,112.05
+11.0.3_openj9,tuned,53.76
+11.0.3_openj9,tuned,53.02
+11.0.3_openj9,tuned,52.12
+11.0.3_openj9,tuned,52.14
+11.0.3_openj9,tuned,52.22
+11.0.3_openj9,tuned,51.59
+11.0.3_openj9,tuned,52.17
+11.0.3_openj9,tuned,51.86
+11.0.3_openj9,tuned,51.34
+11.0.3_openj9,tuned,52.32
