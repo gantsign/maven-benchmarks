@@ -50,6 +50,9 @@ cd maven-opts
 ./run-benchmark.sh
 ```
 
+**Warning:** running the benchmark takes a few hours. You can skip this step to
+view my results.
+
 ## View results
 
 Run the following from the project root:
