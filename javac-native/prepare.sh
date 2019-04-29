@@ -73,7 +73,7 @@ prepare() {
     -classpath "$GRAAL_HOME/lib/tools.jar" ../Javac.java)
 
   (set -x; "$GRAAL_HOME/bin/native-image" --no-server \
-    "-H:ConfigurationFileDirectories=$PWD/../config" \
+    -H:IncludeResourceBundles=com.sun.tools.javac.resources.compiler,com.sun.tools.javac.resources.javac \
     --no-fallback \
     -H:-MultiThreaded \
     -H:+NativeArchitecture \
