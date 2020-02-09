@@ -2,13 +2,13 @@
 
 set -e
 
-base_path="$(pwd)/tmp/maven/3.6.1/bin:$PATH"
+base_path="$(pwd)/tmp/maven/3.6.3/bin:$PATH"
 
 src_dir="$PWD/tmp/commons-collections/src/main/java"
 classes_dir="$PWD/tmp/commons-collections/target/classes"
 options_file="$PWD/tmp/javac_options"
 settings_file="$PWD/settings.xml"
-export GRAAL_HOME="$PWD/tmp/jdk/8u202_graalvm-ce"
+export GRAAL_HOME="$PWD/tmp/jdk/8u242_graalvm-ce"
 
 (cd "$src_dir" &>/dev/null && echo -source 1.8 -target 1.8 -sourcepath . \
     -g -nowarn -encoding iso-8859-1 -d "$classes_dir" \
@@ -132,24 +132,24 @@ echo '*** javac benchmarks ***'
 results_file="$(pwd)/javac_results.csv"
 printf '' > "$results_file"
 
-jdk_name='8u212'
+jdk_name='8u242'
 javac_benchmark 'baseline' false '-J-Xshare:off'
 javac_benchmark 'tuned' false '-J-Xshare:on -J-XX:TieredStopAtLevel=1 -J-XX:+UseParallelGC -J-Xverify:none'
 
-jdk_name='8u212_openj9'
+jdk_name='8u242_openj9'
 javac_benchmark 'baseline' false ''
 javac_benchmark 'tuned' false '-J-Xquickstart -J-Xshareclasses:name=javac -J-Xverify:none'
 
-jdk_name='8u202_graalvm-ce'
+jdk_name='8u242_graalvm-ce'
 javac_benchmark 'baseline' false '-J-Xshare:off'
 javac_benchmark 'tuned' false '-J-Xshare:off -J-Dgraal.CompilerConfiguration=economy'
 javac_benchmark 'native' true ''
 
-jdk_name='11.0.3'
+jdk_name='11.0.6'
 javac_benchmark 'baseline' false '-J-Xshare:off'
 javac_benchmark 'tuned' false '-J-Xshare:on -J-XX:TieredStopAtLevel=1 -J-XX:+UseParallelGC -J-Xverify:none'
 
-jdk_name='11.0.3_openj9'
+jdk_name='11.0.6_openj9'
 javac_benchmark 'baseline' false ''
 javac_benchmark 'tuned' false '-J-Xquickstart -J-Xshareclasses:name=javac -J-Xverify:none'
 
@@ -158,31 +158,31 @@ echo '*** maven benchmarks ***'
 results_file="$(pwd)/mvn_results.csv"
 printf '' > "$results_file"
 
-jdk_name='8u212'
+jdk_name='8u242'
 mvn_benchmark 'baseline' false '-Xshare:off'
 mvn_benchmark 'baseline+native' true '-Xshare:off'
 mvn_benchmark 'tuned' false '-Xshare:on -XX:TieredStopAtLevel=1 -XX:+UseParallelGC -Xverify:none'
 mvn_benchmark 'tuned+native' true '-Xshare:on -XX:TieredStopAtLevel=1 -XX:+UseParallelGC -Xverify:none'
 
-jdk_name='8u212_openj9'
+jdk_name='8u242_openj9'
 mvn_benchmark 'baseline' false ''
 mvn_benchmark 'baseline+native' true ''
 mvn_benchmark 'tuned' false '-Xquickstart -Xshareclasses:name=mvn -DargLine=-Xquickstart -Xverify:none'
 mvn_benchmark 'tuned+native' true '-Xquickstart -Xshareclasses:name=mvn -DargLine=-Xquickstart -Xverify:none'
 
-jdk_name='8u202_graalvm-ce'
+jdk_name='8u242_graalvm-ce'
 mvn_benchmark 'baseline' false '-Xshare:off'
 mvn_benchmark 'baseline+native' true '-Xshare:off'
 mvn_benchmark 'tuned' false '-Xshare:off -Dgraal.CompilerConfiguration=economy'
 mvn_benchmark 'tuned+native' true '-Xshare:off -Dgraal.CompilerConfiguration=economy'
 
-jdk_name='11.0.3'
+jdk_name='11.0.6'
 mvn_benchmark 'baseline' false '-Xshare:off'
 mvn_benchmark 'baseline+native' true '-Xshare:off'
 mvn_benchmark 'tuned' false '-Xshare:on -XX:TieredStopAtLevel=1 -XX:+UseParallelGC -Xverify:none'
 mvn_benchmark 'tuned+native' true '-Xshare:on -XX:TieredStopAtLevel=1 -XX:+UseParallelGC -Xverify:none'
 
-jdk_name='11.0.3_openj9'
+jdk_name='11.0.6_openj9'
 mvn_benchmark 'baseline' false ''
 mvn_benchmark 'baseline+native' true ''
 mvn_benchmark 'tuned' false '-Xquickstart -Xshareclasses:name=mvn -DargLine=-Xquickstart -Xverify:none'
@@ -193,31 +193,31 @@ echo '*** maven no tests benchmarks ***'
 results_file="$(pwd)/mvn_no_tests_results.csv"
 printf '' > "$results_file"
 
-jdk_name='8u212'
+jdk_name='8u242'
 mvn_no_tests_benchmark 'baseline' false '-Xshare:off'
 mvn_no_tests_benchmark 'baseline+native' true '-Xshare:off'
 mvn_no_tests_benchmark 'tuned' false '-Xshare:on -XX:TieredStopAtLevel=1 -XX:+UseParallelGC -Xverify:none'
 mvn_no_tests_benchmark 'tuned+native' true '-Xshare:on -XX:TieredStopAtLevel=1 -XX:+UseParallelGC -Xverify:none'
 
-jdk_name='8u212_openj9'
+jdk_name='8u242_openj9'
 mvn_no_tests_benchmark 'baseline' false ''
 mvn_no_tests_benchmark 'baseline+native' true ''
 mvn_no_tests_benchmark 'tuned' false '-Xquickstart -Xshareclasses:name=mvn -DargLine=-Xquickstart -Xverify:none'
 mvn_no_tests_benchmark 'tuned+native' true '-Xquickstart -Xshareclasses:name=mvn -DargLine=-Xquickstart -Xverify:none'
 
-jdk_name='8u202_graalvm-ce'
+jdk_name='8u242_graalvm-ce'
 mvn_no_tests_benchmark 'baseline' false '-Xshare:off'
 mvn_no_tests_benchmark 'baseline+native' true '-Xshare:off'
 mvn_no_tests_benchmark 'tuned' false '-Xshare:off -Dgraal.CompilerConfiguration=economy'
 mvn_no_tests_benchmark 'tuned+native' true '-Xshare:off -Dgraal.CompilerConfiguration=economy'
 
-jdk_name='11.0.3'
+jdk_name='11.0.6'
 mvn_no_tests_benchmark 'baseline' false '-Xshare:off'
 mvn_no_tests_benchmark 'baseline+native' true '-Xshare:off'
 mvn_no_tests_benchmark 'tuned' false '-Xshare:on -XX:TieredStopAtLevel=1 -XX:+UseParallelGC -Xverify:none'
 mvn_no_tests_benchmark 'tuned+native' true '-Xshare:on -XX:TieredStopAtLevel=1 -XX:+UseParallelGC -Xverify:none'
 
-jdk_name='11.0.3_openj9'
+jdk_name='11.0.6_openj9'
 mvn_no_tests_benchmark 'baseline' false ''
 mvn_no_tests_benchmark 'baseline+native' true ''
 mvn_no_tests_benchmark 'tuned' false '-Xquickstart -Xshareclasses:name=mvn -DargLine=-Xquickstart -Xverify:none'

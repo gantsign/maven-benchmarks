@@ -5,23 +5,23 @@ set -e
 mkdir -p tmp/bin
 
 dependencies=(
-"https://github.com/oracle/graal/releases/download/vm-1.0.0-rc16/\
-graalvm-ce-1.0.0-rc16-linux-amd64.tar.gz"
+"https://github.com/graalvm/graalvm-ce-builds/releases/download/\
+vm-19.3.1/graalvm-ce-java8-linux-amd64-19.3.1.tar.gz"
 
 "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/\
-jdk8u212-b03/OpenJDK8U-jdk_x64_linux_hotspot_8u212b03.tar.gz"
+jdk8u242-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u242b08.tar.gz"
 
 "https://github.com/AdoptOpenJDK/openjdk8-binaries/releases/download/\
-jdk8u212-b03_openj9-0.14.0/OpenJDK8U-jdk_x64_linux_openj9_8u212b03_openj9-0.14.0.tar.gz"
+jdk8u242-b08_openj9-0.18.1/OpenJDK8U-jdk_x64_linux_openj9_8u242b08_openj9-0.18.1.tar.gz"
 
 "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/\
-jdk-11.0.3%2B7/OpenJDK11U-jdk_x64_linux_hotspot_11.0.3_7.tar.gz"
+jdk-11.0.6%2B10/OpenJDK11U-jdk_x64_linux_hotspot_11.0.6_10.tar.gz"
 
 "https://github.com/AdoptOpenJDK/openjdk11-binaries/releases/download/\
-jdk-11.0.3%2B7_openj9-0.14.0/OpenJDK11U-jdk_x64_linux_openj9_11.0.3_7_openj9-0.14.0.tar.gz"
+jdk-11.0.6%2B10_openj9-0.18.1/OpenJDK11U-jdk_x64_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz"
 
-"http://mirror.ox.ac.uk/sites/rsync.apache.org/maven/maven-3/3.6.1/binaries/\
-apache-maven-3.6.1-bin.tar.gz"
+"http://mirror.ox.ac.uk/sites/rsync.apache.org/maven/maven-3/\
+3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz"
 )
 
 prepare() {
@@ -31,28 +31,28 @@ prepare() {
   done
 
   (set -x; tar --extract \
-    --transform 's|graalvm-ce-1.0.0-rc16|jdk/8u202_graalvm-ce|' --file \
-    'graalvm-ce-1.0.0-rc16-linux-amd64.tar.gz')
+    --transform 's|graalvm-ce-java8-19.3.1|jdk/8u242_graalvm-ce|' --file \
+    'graalvm-ce-java8-linux-amd64-19.3.1.tar.gz')
 
   (set -x; tar --extract \
-    --transform 's|jdk8u212-b03|jdk/8u212|' --file \
-    'OpenJDK8U-jdk_x64_linux_hotspot_8u212b03.tar.gz')
+    --transform 's|jdk8u242-b08|jdk/8u242|' --file \
+    'OpenJDK8U-jdk_x64_linux_hotspot_8u242b08.tar.gz')
 
   (set -x; tar --extract \
-    --transform 's|jdk8u212-b03|jdk/8u212_openj9|' --file \
-    'OpenJDK8U-jdk_x64_linux_openj9_8u212b03_openj9-0.14.0.tar.gz')
+    --transform 's|jdk8u242-b08|jdk/8u242_openj9|' --file \
+    'OpenJDK8U-jdk_x64_linux_openj9_8u242b08_openj9-0.18.1.tar.gz')
 
   (set -x; tar --extract \
-    --transform 's|jdk-11.0.3+7|jdk/11.0.3|' --file \
-    'OpenJDK11U-jdk_x64_linux_hotspot_11.0.3_7.tar.gz')
+    --transform 's|jdk-11.0.6+10|jdk/11.0.6|' --file \
+    'OpenJDK11U-jdk_x64_linux_hotspot_11.0.6_10.tar.gz')
 
   (set -x; tar --extract \
-    --transform 's|jdk-11.0.3+7|jdk/11.0.3_openj9|' --file \
-    'OpenJDK11U-jdk_x64_linux_openj9_11.0.3_7_openj9-0.14.0.tar.gz')
+    --transform 's|jdk-11.0.6+10|jdk/11.0.6_openj9|' --file \
+    'OpenJDK11U-jdk_x64_linux_openj9_11.0.6_10_openj9-0.18.1.tar.gz')
 
   (set -x; tar --extract \
-    --transform 's|apache-maven-3.6.1|maven/3.6.1|' --file \
-    'apache-maven-3.6.1-bin.tar.gz')
+    --transform 's|apache-maven-3.6.3|maven/3.6.3|' --file \
+    'apache-maven-3.6.3-bin.tar.gz')
 
   (set -x; rm -rf commons-collections)
 
@@ -67,15 +67,16 @@ prepare() {
   rm commons-collections/src/test/java/org/apache/commons/collections4/map/ReferenceIdentityMapTest.java
   rm commons-collections/src/test/java/org/apache/commons/collections4/map/ReferenceMapTest.java
 
-  export GRAAL_HOME="$PWD/jdk/8u202_graalvm-ce"
+  export GRAAL_HOME="$PWD/jdk/8u242_graalvm-ce"
 
   (set -x; "$GRAAL_HOME/bin/javac" \
     -classpath "$GRAAL_HOME/lib/tools.jar" ../Javac.java)
 
+  (set -x; "$GRAAL_HOME/bin/gu" install native-image)
+
   (set -x; "$GRAAL_HOME/bin/native-image" --no-server \
     -H:IncludeResourceBundles=com.sun.tools.javac.resources.compiler,com.sun.tools.javac.resources.javac \
     --no-fallback \
-    -H:-MultiThreaded \
     -H:+NativeArchitecture \
     -H:Name=javac-native "-H:Path=$PWD/bin" \
     -cp "..:$GRAAL_HOME/lib/tools.jar" \
