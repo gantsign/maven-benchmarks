@@ -1,5 +1,12 @@
 # Maven Native Javac Benchmarks
 
+**Note:** the scripts have been updated to support GraalVM 19.3.1 but the data
+hasn't been updated with new benchmark results. The the data remains the same as
+the [Native javac built with GraalVM](https://medium.com/@john_freeman/native-javac-with-graalvm-ddcc18a53edb)
+Medium article.
+
+To view the benchmark script as used in the Medium article view the [medium-29Apr2019](https://github.com/gantsign/maven-benchmarks/tree/medium-29Apr2019/javac-native) tag.
+
 ## Prerequisites
 
 * Ubuntu Linux
