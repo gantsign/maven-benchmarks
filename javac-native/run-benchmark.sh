@@ -2,7 +2,7 @@
 
 set -e
 
-base_path="$(pwd)/tmp/maven/3.6.3/bin:$PATH"
+base_path="$(pwd)/tmp/maven/3.6.3/bin:$(pwd)/tmp/bin:$PATH"
 
 src_dir="$PWD/tmp/commons-collections/src/main/java"
 classes_dir="$PWD/tmp/commons-collections/target/classes"
